@@ -12,8 +12,17 @@ module.exports = {
 		extend: {
 			 
 			fontFamily: {
-				poly: ['"poly"', "serif"],
+				'sans': ['Quicksand', 'sans-serif'],
+				'quicksand': ['Quicksand', 'sans-serif'],
+				'varela': ['Varela Round', 'sans-serif'],
 			},
+			colors: {
+				'brand-blue': '#76B1FF',
+				'brand-black': '#000000',
+			},
+			backgroundImage: {
+				'purple-gradient': 'linear-gradient(45deg, #8B5CF6, #EC4899)',
+			}
 		},
 	},
 	plugins: [
