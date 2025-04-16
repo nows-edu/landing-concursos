@@ -511,9 +511,48 @@
         </section>
 
         <!--Forms section -->
-        <section
-            class="tw-mt-5 tw-flex tw-min-h-[80vh] tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-p-[2%] max-lg:tw-p-3"
-        >
+        <section class="tw-mt-5 tw-flex tw-min-h-[80vh] tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-p-[2%] max-lg:tw-p-3">
+            <div class="reveal-up tw-flex tw-w-full tw-max-w-[800px] tw-flex-col tw-place-items-center tw-gap-6 tw-rounded-lg tw-border-[1px] 
+                        tw-border-outlineColor tw-bg-white dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-8 tw-shadow-xl">
+                <h2 class="tw-text-4xl tw-font-medium max-md:tw-text-2xl">Contáctanos</h2>
+                <p class="tw-text-center tw-text-gray-600 dark:tw-text-gray-400">¿Tienes alguna pregunta o sugerencia? ¡Nos encantaría escucharte!</p>
+                
+                <form class="tw-w-full tw-max-w-[600px] tw-flex tw-flex-col tw-gap-6">
+                    <div class="tw-grid tw-grid-cols-2 tw-gap-4 max-md:tw-grid-cols-1">
+                        <input type="text" placeholder="Nombre" 
+                            class="tw-text-left !tw-w-full !tw-rounded-xl !tw-p-4 tw-flex tw-gap-2 !tw-bg-transparent !tw-text-black dark:!tw-text-white 
+                            tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white 
+                            tw-placeholder-gray-600 dark:tw-placeholder-gray-300">
+                        
+                        <input type="text" placeholder="Apellidos" 
+                            class="tw-text-left !tw-w-full !tw-rounded-xl !tw-p-4 tw-flex tw-gap-2 !tw-bg-transparent !tw-text-black dark:!tw-text-white 
+                            tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white 
+                            tw-placeholder-gray-600 dark:tw-placeholder-gray-300">
+                    </div>
+
+                    <input type="email" placeholder="Email" 
+                        class="tw-text-left !tw-w-full !tw-rounded-xl !tw-p-4 tw-flex tw-gap-2 !tw-bg-transparent !tw-text-black dark:!tw-text-white 
+                        tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white 
+                        tw-placeholder-gray-600 dark:tw-placeholder-gray-300">
+
+                    <input type="tel" placeholder="Teléfono" 
+                        class="tw-text-left !tw-w-full !tw-rounded-xl !tw-p-4 tw-flex tw-gap-2 !tw-bg-transparent !tw-text-black dark:!tw-text-white 
+                        tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white 
+                        tw-placeholder-gray-600 dark:tw-placeholder-gray-300">
+
+                    <textarea placeholder="Mensaje" rows="4" 
+                        class="tw-text-left !tw-w-full !tw-rounded-xl !tw-p-4 tw-flex tw-gap-2 !tw-bg-transparent !tw-text-black dark:!tw-text-white 
+                        tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white 
+                        tw-placeholder-gray-600 dark:tw-placeholder-gray-300"></textarea>
+
+                    <button type="submit" 
+                        class="btn tw-group tw-flex tw-gap-2 tw-shadow-lg !tw-w-full !tw-rounded-xl !tw-py-4 
+                        tw-transition-transform tw-duration-[0.3s] hover:tw-scale-[1.02]">
+                        <span>Enviar mensaje</span>
+                        <i class="bi bi-send tw-transition-transform tw-duration-300 group-hover:tw-translate-x-1"></i>
+                    </button>
+                </form>
+            </div>
         </section>
 
         <!--FAQ section -->
