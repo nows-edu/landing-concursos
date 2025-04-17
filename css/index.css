@@ -157,13 +157,6 @@ hr{
     opacity: 0.5;
 }
 
-#dashboard {
-    /* transform-origin: bottom center; */
-    transform: perspective(1200px) translateX(0px) translateY(12px) scale(0.8)
-        rotate(0deg) rotateX(70deg);
-    transition: transform 0.5;
-}
-
 .opacity-0{
     opacity: 0 !important;
 }
@@ -259,83 +252,6 @@ hr{
 
 .dropdown-menu li:hover {
     background-color: var(--dropdown-hover-bg);
-}
-
-/* -------------- carousel ------------------*/
-.carousel-container {
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-    max-width: 800px;
-}
-  
-.carousel {
-    display: inline-block;
-    animation: scroll 10s linear infinite;
-}
-  
-.carousel-img {
-    display: inline-block;
-    margin: 0 20px;
-}
-  
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-
-/* ------ animated border ------- */
-
-.animated-border {
-    position: relative;
-    overflow: visible;
-}
-
-
-.animated-border::after{
-    content: '';
-    position: absolute;
-    top: 0px; 
-    left: -100%; 
-    width: 30%;
-    height: 100%;
-    border-radius: inherit; 
-    /* background: linear-gradient(#6366f1 23%, rgba(124,190,255,0) 87%); */
-    background-color: #6366f1;
-    background-repeat: no-repeat;
-    /* background-size: 200% 200%; */
-    background-position: 0% 0%;
-    filter: blur(1.5rem);
-    opacity: 0.8;
-    box-shadow: inset 0px 0px 20px 5px #6366f1;
-    /* transform: rotate(90deg); */
-    z-index: -2;
-    pointer-events: none;
-    animation: slide 10s ease-in-out infinite;
-   
-}
-
-.animated-border::before{
-    filter: blur(1.5rem);
-    opacity: 0.3;
-    will-change: transform;
-}
-
-@keyframes slide{
-    0% {
-        left: -100%; /* Start completely outside the left edge */
-        right: 100%; /* End completely outside the right edge */
-    }
-   
-    100% {
-        left: 100%; /* Move completely outside the right edge */
-        right: -100%; /* End completely outside the left edge */
-    }
 }
 
 .footer-link{
