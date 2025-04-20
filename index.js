@@ -48,25 +48,6 @@ function toggleHeader() {
     }
 }
 
-function responsive() {
-    if (!isHeaderCollapsed){
-        toggleHeader()
-    }
-
-    if (window.innerWidth > RESPONSIVE_WIDTH) {
-        collapseHeaderItems.style.height = ""
-        navToggle.addEventListener("mouseenter", openNavDropdown)
-        navToggle.addEventListener("mouseleave", navMouseLeave)
-
-    } else {
-        isHeaderCollapsed = true
-        navToggle.removeEventListener("mouseenter", openNavDropdown)
-        navToggle.removeEventListener("mouseleave", navMouseLeave)
-    }
-}
-responsive()
-window.addEventListener("resize", responsive)
-
 /** Dark and light theme */
 if (localStorage.getItem('color-mode') === 'dark' || (!('color-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.classList.add('tw-dark')
@@ -98,46 +79,6 @@ function updateToggleModeBtn(){
         toggleIcon.classList.remove("bi-moon")
         localStorage.setItem("color-mode", "light")
     }
-
-}
-
-navToggle.addEventListener("click", toggleNavDropdown)
-navDropdown.addEventListener("mouseleave", closeNavDropdown)
-
-function toggleNavDropdown(){
-
-    if (navDropdown.getAttribute("data-open") === "true"){
-        closeNavDropdown()
-    }else{
-        openNavDropdown()
-    }
-}
-
-function navMouseLeave(){
-    setTimeout(closeNavDropdown, 100)
-}
-
-function openNavDropdown(event){
-
-    navDropdown.classList.add("tw-opacity-100", "tw-scale-100", 
-                            "max-lg:tw-min-h-[450px]", "max-lg:!tw-h-fit", "tw-min-w-[320px]")
-    
-    navDropdown.setAttribute("data-open", true)
-
-}
-
-function closeNavDropdown(event){
-
-    // console.log("event target: ", event.target, event.target.contains(navDropdown))
-    
-    if (navDropdown.matches(":hover")){
-        return
-    }
-
-    navDropdown.classList.remove("tw-opacity-100", "tw-scale-100", 
-        "max-lg:tw-min-h-[450px]", "tw-min-w-[320px]", "max-lg:!tw-h-fit",)
-
-    navDropdown.setAttribute("data-open", false)
 
 }
 
