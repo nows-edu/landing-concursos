@@ -142,25 +142,33 @@
                     </div>
 
                     <div class="tw-flex tw-items-center tw-gap-4 tw-w-full">
-                        <div class="max-lg:tw-hidden tw-flex-1 tw-flex tw-justify-center tw-w-full"></div>
-                        <div class="tw-flex-2 tw-flex tw-justify-center tw-w-full max-lg:tw-flex-1"> 
+                        <!-- Spacer for large screens -->
+                        <div class="max-lg:tw-hidden tw-flex-1"></div>
+                        
+                        <!-- Input container -->
+                        <div class="tw-flex tw-flex-1 tw-max-w-[600px]"> 
                             <input 
                                 type="email" 
                                 id="newsletter-email-h"
                                 placeholder="Danos tu correo para recibir actualizaciones" 
-                                class="tw-text-left !tw-w-full !tw-rounded-xl !tw-p-2 !tw-py-4 max-lg:!tw-py-2 tw-flex tw-gap-2 !tw-bg-transparent !tw-text-black dark:!tw-text-white tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white tw-placeholder-gray-600 dark:tw-placeholder-gray-300"
+                                class="tw-text-left !tw-w-full !tw-rounded-xl !tw-p-2 !tw-py-4 max-lg:!tw-py-2 tw-flex tw-gap-2 
+                                       !tw-bg-transparent !tw-text-black dark:!tw-text-white tw-transition-colors tw-duration-[0.3s] 
+                                       tw-border-[1px] tw-border-black dark:tw-border-white tw-placeholder-gray-600 dark:tw-placeholder-gray-300"
                             />
                         </div>
+
+                        <!-- Button -->
                         <button
                             onclick="submitNewsletter('newsletter-email-h')"
-                            class="btn tw-group tw-flex-1 tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03] max-lg:!tw-w-full"
-                            >
-                            
+                            class="btn tw-group tw-flex tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 
+                                   max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03] max-lg:!tw-w-full"
+                        >
                             <span>Empezar</span>
                             <i class="bi bi-arrow-right group-hover:tw-translate-x-1 tw-duration-300"></i>
-
                         </button>
-                        <div class="max-lg:tw-hidden tw-flex-2 tw-flex tw-justify-center tw-w-full"></div>
+
+                        <!-- Spacer for large screens -->
+                        <div class="max-lg:tw-hidden tw-flex-1"></div>
                     </div>
                     
                     
