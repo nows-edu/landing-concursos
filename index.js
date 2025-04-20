@@ -205,3 +205,74 @@ sections.forEach((sec) => {
 
 
 })
+
+//submit funcitons
+async function submitNewsletter(inputId) {
+    const emailInput = document.getElementById(inputId);
+    const email = emailInput.value.trim();
+    const button = document.querySelector(`button[onclick="submitNewsletter('${inputId}')"]`);
+
+    if (!email || !email.includes('@')) {
+        alert('Por favor, introduce un email válido.');
+        return;
+    }
+    button.disabled = true;
+    button.classList.add('btn-loading');
+    try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbymk_o7QJ8s3u3D4ls5XcFXcS8W0mk7Xp6wr0vmTlJSK_JgId8bx2-dC4qtclOLPzrNYg/exec', {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify({ email }),
+        });
+
+        if (response.ok) {
+            window.location.href = 'thanks.html?type=newsletter';
+        } else {
+            console.error('Server error:', await response.text());
+            alert('Error submitting form. Please try again.');
+        }
+    } catch (error) {
+        console.error('Network error:', error);
+        alert('Network error. Please try again.');
+    }
+}
+
+async function submitContactForm(event) {
+    event.preventDefault();
+    const form = event.target;
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    const formData = {
+        firstName: document.getElementById('firstName').value.trim(),
+        lastName: document.getElementById('lastName').value.trim(),
+        email: document.getElementById('contactEmail').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        message: document.getElementById('message').value.trim()
+    };
+
+    if (!formData.email || !formData.email.includes('@')) {
+        alert('Por favor, introduce un email válido.');
+        return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.classList.add('btn-loading');
+
+    try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbxyS7JsZ5pd51PbaVs_LEe3zpmSS-Fn9vk0G_P_4AyMCN40AMqJMVH-mSnmqs9QtxLxhA/exec', {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+            window.location.href = 'thanks.html?type=contact';
+        } else {
+            console.error('Server error:', await response.text());
+            alert('Error submitting form. Please try again.');
+        }
+    } catch (error) {
+        console.error('Network error:', error);
+        alert('Network error. Please try again.');
+    }
+}

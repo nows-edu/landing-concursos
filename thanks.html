@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="tw-dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias! - NOWS</title>
+    <link rel="stylesheet" href="css/tailwind-runtime.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] tw-text-black dark:tw-bg-black dark:tw-text-white">
+    <div class="tw-flex tw-flex-col tw-items-center tw-justify-center tw-flex-1 tw-p-8 tw-text-center">
+        <img src="./assets/logo/logo.svg" alt="NOWS Logo" class="tw-w-32 tw-mb-8 dark:tw-invert">
+        
+        <div id="newsletter-message" class="tw-hidden">
+            <h1 class="tw-text-4xl tw-font-bold tw-mb-4">¡Gracias por suscribirte!</h1>
+            <p class="tw-text-xl tw-mb-8">Te mantendremos informado sobre todas las novedades.</p>
+        </div>
+        
+        <div id="contact-message" class="tw-hidden">
+            <h1 class="tw-text-4xl tw-font-bold tw-mb-4">¡Gracias por contactarnos!</h1>
+            <p class="tw-text-xl tw-mb-8">Nos pondremos en contacto contigo pronto.</p>
+        </div>
+
+        <a href="index.html" class="btn tw-group tw-flex tw-gap-2">
+            <span>Volver al inicio</span>
+            <i class="bi bi-arrow-left"></i>
+        </a>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const type = params.get('type');
+            
+            if (type === 'newsletter') {
+                document.getElementById('newsletter-message').classList.remove('tw-hidden');
+            } else if (type === 'contact') {
+                document.getElementById('contact-message').classList.remove('tw-hidden');
+            }
+        }
+    </script>
+</body>
+</html>

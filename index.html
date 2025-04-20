@@ -149,16 +149,20 @@
                         <div class="tw-flex-2 tw-flex tw-justify-center tw-w-full max-lg:tw-flex-1"> 
                             <input 
                                 type="email" 
+                                id="newsletter-email-h"
                                 placeholder="Danos tu correo para recibir actualizaciones" 
                                 class="tw-text-left !tw-w-full !tw-rounded-xl !tw-p-2 !tw-py-4 max-lg:!tw-py-2 tw-flex tw-gap-2 !tw-bg-transparent !tw-text-black dark:!tw-text-white tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white tw-placeholder-gray-600 dark:tw-placeholder-gray-300"
                             />
                         </div>
-                        
-                        <a class="btn tw-group tw-flex-1 tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03] max-lg:!tw-w-full"
-                            href="#">
+                        <button
+                            onclick="submitNewsletter('newsletter-email-h')"
+                            class="btn tw-group tw-flex-1 tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03] max-lg:!tw-w-full"
+                            >
+                            
                             <span>Empezar</span>
                             <i class="bi bi-arrow-right group-hover:tw-translate-x-1 tw-duration-300"></i>
-                        </a>
+
+                        </button>
                         <div class="max-lg:tw-hidden tw-flex-2 tw-flex tw-justify-center tw-w-full"></div>
                     </div>
                     
@@ -214,8 +218,8 @@
                                 NOWS te muestra la vida universitaria sin filtros. Retos, testimonios y momentos auténticos compartidos por estudiantes para que sepas cómo se vive de verdad. No más dudas, no más catálogos aburridos: lo ves, lo vives, lo decides.                            
                             </p>
                             <div class="tw-flex tw-items-center tw-gap-2 tw-mt-auto">
-                                <span>Learn more</span>
-                                <i class="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i>
+                                <!-- <span>Learn more</span> -->
+                                <!-- <i class="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i> -->
                             </div>
                         </a>
                     </div>
@@ -235,8 +239,8 @@
                                 Recibe lo que de verdad te interesa, sin tener que buscarlo. Eventos, programas y actividades dentro y fuera de tu uni, recomendados según tus gustos. Para que no te pierdas nada que pueda marcar tu camino.
                             </p>
                             <div class="tw-flex tw-items-center tw-gap-2 tw-mt-auto">
-                                <span>Learn more</span>
-                                <i class="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i>
+                                <!-- <span>Learn more</span> -->
+                                <!-- <i class="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i> -->
                             </div>
                         </a>
                     </div>
@@ -257,8 +261,8 @@
                                 </p>
                             </div>
                             <div class="tw-flex tw-items-center tw-gap-2 tw-mt-auto">
-                                <span>Learn more</span>
-                                <i class="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i>
+                                <!-- <span>Learn more</span> -->
+                                <!-- <i class="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i> -->
                             </div>
                         </a>
                     </div>
@@ -284,21 +288,21 @@
                         mejorar tu experiencia universitaria.</div>
                 </div>
 
-                <div
-                    class="tw-flex tw-h-[60px] tw-place-items-center tw-gap-2 tw-overflow-hidden tw-p-2"
-                >
+                <!-- Newsletter form 1 -->
+                <div class="tw-flex tw-h-[60px] tw-place-items-center tw-gap-2 tw-overflow-hidden tw-p-2">
                     <input
                         type="email"
+                        id="newsletter-email-1"
                         class="input tw-h-full tw-w-full !tw-border-gray-600 tw-p-2 tw-outline-none"
                         placeholder="email"
                     />
-                    <a
-                        class="btn !tw-rounded-full !tw-border-[1px] !tw-text-black !tw-border-solid !tw-border-black  dark:!tw-text-white
+                    <button
+                        onclick="submitNewsletter('newsletter-email-1')"
+                        class="btn !tw-rounded-full !tw-border-[1px] !tw-text-black !tw-border-solid !tw-border-black dark:!tw-text-white
                             dark:!tw-border-gray-300 !tw-bg-transparent tw-transition-colors tw-duration-[0.3s]"
-                        href=""
                     >
                         Empezar
-                    </a>
+                    </button>
                 </div>
             </div>
         </section>
@@ -443,30 +447,31 @@
                 <h2 class="tw-text-4xl tw-font-medium max-md:tw-text-2xl">Contáctanos</h2>
                 <p class="tw-text-center tw-text-gray-600 dark:tw-text-gray-400">¿Tienes alguna pregunta o sugerencia? ¡Nos encantaría escucharte!</p>
                 
-                <form class="tw-w-full tw-max-w-[600px] tw-flex tw-flex-col tw-gap-6">
+                <!-- Contact form -->
+                <form id="contact-form" class="tw-w-full tw-max-w-[600px] tw-flex tw-flex-col tw-gap-6" onsubmit="submitContactForm(event)">
                     <div class="tw-grid tw-grid-cols-2 tw-gap-4 max-md:tw-grid-cols-1">
-                        <input type="text" placeholder="Nombre" 
+                        <input type="text" id="firstName" placeholder="Nombre" required
                             class="tw-text-left !tw-w-full !tw-rounded-xl !tw-p-4 tw-flex tw-gap-2 !tw-bg-transparent !tw-text-black dark:!tw-text-white 
                             tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white 
                             tw-placeholder-gray-600 dark:tw-placeholder-gray-300">
                         
-                        <input type="text" placeholder="Apellidos" 
+                        <input type="text" id="lastName" placeholder="Apellidos" required
                             class="tw-text-left !tw-w-full !tw-rounded-xl !tw-p-4 tw-flex tw-gap-2 !tw-bg-transparent !tw-text-black dark:!tw-text-white 
                             tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white 
                             tw-placeholder-gray-600 dark:tw-placeholder-gray-300">
                     </div>
 
-                    <input type="email" placeholder="Email" 
+                    <input type="email" id="contactEmail" placeholder="Email" required
                         class="tw-text-left !tw-w-full !tw-rounded-xl !tw-p-4 tw-flex tw-gap-2 !tw-bg-transparent !tw-text-black dark:!tw-text-white 
                         tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white 
                         tw-placeholder-gray-600 dark:tw-placeholder-gray-300">
 
-                    <input type="tel" placeholder="Teléfono" 
+                    <input type="tel" id="phone" placeholder="Teléfono" required
                         class="tw-text-left !tw-w-full !tw-rounded-xl !tw-p-4 tw-flex tw-gap-2 !tw-bg-transparent !tw-text-black dark:!tw-text-white 
                         tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white 
                         tw-placeholder-gray-600 dark:tw-placeholder-gray-300">
 
-                    <textarea placeholder="Mensaje" rows="4" 
+                    <textarea id="message" placeholder="Mensaje" rows="4" required
                         class="tw-text-left !tw-w-full !tw-rounded-xl !tw-p-4 tw-flex tw-gap-2 !tw-bg-transparent !tw-text-black dark:!tw-text-white 
                         tw-transition-colors tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white 
                         tw-placeholder-gray-600 dark:tw-placeholder-gray-300"></textarea>
@@ -585,14 +590,15 @@
                         type="email"
                         class="input tw-h-full tw-w-full !tw-border-gray-600 tw-p-2 tw-outline-none"
                         placeholder="email"
+                        id="newsletter-email-2"
                     />
-                    <a
-                        class="btn !tw-rounded-full !tw-border-[1px] !tw-text-black !tw-border-solid !tw-border-black  dark:!tw-text-white
-                            dark:!tw-border-gray-300 !tw-bg-transparent tw-transition-colors tw-duration-[0.3s]"
-                        href=""
+                    <button
+                    onclick="submitNewsletter('newsletter-email-2')"
+                    class="btn !tw-rounded-full !tw-border-[1px] !tw-text-black !tw-border-solid !tw-border-black dark:!tw-text-white
+                        dark:!tw-border-gray-300 !tw-bg-transparent tw-transition-colors tw-duration-[0.3s]"
                     >
                         Empezar
-                    </a>
+                    </button>
                 </div>
             </div>
         </section>
