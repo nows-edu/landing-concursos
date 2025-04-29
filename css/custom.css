@@ -1,6 +1,34 @@
-.hero-title .highlight {
-    color: #76B1FF !important;
-    font-weight: 700 !important;  /* Added extra boldness */
+/* Hero Title Styling */
+.hero-title {
+    font-size: 6rem; /* Adjust for desktop */
+    font-weight: 700; /* Bold for emphasis */
+    line-height: 1.2; /* Improve readability */
+    letter-spacing: -0.02em; /* Slightly tighten spacing */
+    text-transform: uppercase; /* Make it stand out */
+    background: linear-gradient(90deg, #6a11cb, #2575fc); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient effect */
+    animation: fadeIn 1.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem; /* Adjust for mobile */
+        line-height: 1.4;
+    }
+}
+
+/* Keyframe animation for fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Default order for desktop */
