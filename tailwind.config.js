@@ -15,6 +15,7 @@ module.exports = {
 				'sans': ['Quicksand', 'sans-serif'],
 				'quicksand': ['Quicksand', 'sans-serif'],
 				'varela': ['Varela Round', 'sans-serif'],
+				'poppins': ['Poppins', 'sans-serif'],
 			},
 			colors: {
 				'brand-blue': '#76B1FF',

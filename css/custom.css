@@ -5,7 +5,7 @@
     line-height: 1.2; /* Improve readability */
     letter-spacing: -0.02em; /* Slightly tighten spacing */
     text-transform: uppercase; /* Make it stand out */
-    background: linear-gradient(90deg, #6a11cb, #2575fc); /* Gradient text */
+    background: linear-gradient(90deg, #ffff, #2575fc); /* Gradient text */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Gradient effect */
     animation: fadeIn 1.5s ease-in-out; /* Smooth fade-in effect */
@@ -29,6 +29,10 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.hero-title .highlight {
+    font-weight: 700 !important;  /* Added extra boldness */
 }
 
 /* Default order for desktop */
