@@ -5,7 +5,7 @@
     line-height: 1.2; /* Improve readability */
     letter-spacing: -0.02em; /* Slightly tighten spacing */
     text-transform: uppercase; /* Make it stand out */
-    background: linear-gradient(90deg, #ffff, #2575fc); /* Gradient text */
+    background: linear-gradient(90deg, #54d2d0ca , #2575fc); /* Gradient text */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Gradient effect */
     animation: fadeIn 1.5s ease-in-out; /* Smooth fade-in effect */
