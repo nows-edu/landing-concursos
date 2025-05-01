@@ -3,24 +3,36 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tu compañero universitario</title>
-        <meta name="description" content="Tu compañero universitario" />
-        <link rel="shortcut icon" type="image/x-icon" href="./assets/logo/favicon.ico">
-
+        <title>NOWS - Tu compañero universitario</title>
+        <meta name="description" content="NOWS es la app que convierte la vida universitaria en una experiencia más activa, conectada y divertida. Descubre eventos, retos y comunidades que encajan contigo." />
+        <meta name="keywords" content="NOWS, vida universitaria, eventos, retos, comunidades, app universitaria, estudiantes, actividades sociales, conexiones universitarias" />
+        <meta name="author" content="NOWS Team" />
+        <meta name="robots" content="index, follow" />
 
         <!-- Open Graph / Facebook -->
-        <meta property="og:title" content="Tu compañero universitario" />
-        <meta property="og:description" content="Tu compañero universitario" />
+        <meta property="og:title" content="NOWS - Tu compañero universitario" />
+        <meta property="og:description" content="NOWS es la app que convierte la vida universitaria en una experiencia más activa, conectada y divertida. Descubre eventos, retos y comunidades que encajan contigo." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://github.com/jg03dev" />
-        <meta property="og:image" content="" />
+        <meta property="og:image" content="./assets/logo/logo.png" />
+        <meta property="og:locale" content="es_ES" />
 
-        <!-- <link rel="stylesheet" href="css/tailwind-runtime.css" /> -->
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="NOWS - Tu compañero universitario" />
+        <meta name="twitter:description" content="NOWS es la app que convierte la vida universitaria en una experiencia más activa, conectada y divertida." />
+        <meta name="twitter:image" content="./assets/logo/logo.png" />
+        <meta name="twitter:site" content="@nows_es" />
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="./assets/logo/favicon.ico">
+
+        <!-- Stylesheets -->
         <link rel="stylesheet" href="css/tailwind-build.css">
-        <link rel="stylesheet" href="css/index.css" /> <!--Style from the template-->
-        <link rel="stylesheet" href="css/custom.css" /> <!--Our styles-->
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/custom.css" />
 
-
+        <!-- Bootstrap Icons -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
@@ -29,42 +41,33 @@
             referrerpolicy="no-referrer"
         />
 
+        <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
 
-
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-"></script>
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PH50KMHGNY"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
-            gtag('config', 'G-');
+            gtag('config', 'G-PH50KMHGNY');
         </script>
-        
-
     </head>
     <body
         class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] 
-            tw-text-black dark:tw-bg-black  dark:tw-text-white"
+            tw-text-black dark:tw-bg-black dark:tw-text-white"
     >
-        <!-- <div class="tw-absolute tw-top-0 tw-left-1/2 tw--translate-x-1/2 tw-flex 
-                    tw-h-[100px] tw-w-full tw-max-w-[80%]">
-            <div class="header-gradient tw-h-full tw-w-full "></div>
-        </div> -->
-
+        <!-- Header -->
         <header
             class="lg:tw-px-4 tw-max-w-[100vw] tw-max-w-lg:tw-mr-auto max-lg:tw-top-0 tw-fixed tw-top-4 lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[60px] tw-w-full 
                     tw-text-gray-700 tw-bg-white dark:tw-text-gray-200 dark:tw-bg-[#17181b] tw-px-[3%] tw-rounded-md lg:tw-max-w-5xl tw-shadow-md dark:tw-shadow-gray-700
                     lg:tw-justify-around lg:!tw-backdrop-blur-lg lg:tw-opacity-[0.99]"
         >
             <a class="tw-flex tw-p-[4px] tw-gap-2 tw-place-items-center" href="#">
-               
-
                 <div class="tw-h-[30px] tw-max-w-[100px]">
                     <img
                         src="./assets/logo/logo.svg"
-                        alt="logo"
+                        alt="NOWS Logo"
                         class="tw-object-contain tw-h-full tw-w-full dark:tw-invert"
                     />
                 </div>
@@ -77,17 +80,16 @@
                     class="tw-relative tw-flex tw-h-full max-lg:tw-h-max tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col 
                                 max-lg:tw-gap-5 lg:tw-mx-auto tw-place-items-center"
                 >
-                    <a class="header-links" href="#features"> Soluciones </a>
-                    <a class="header-links" href="#about-us"> Sobre Nosotros </a>
-                    <a class="header-links" href="#contact"> Saber mas </a>
-                    <a class="header-links" href="#faq"> FAQ </a>
-                    
+                    <a class="header-links" href="#features">Soluciones</a>
+                    <a class="header-links" href="#about-us">Sobre Nosotros</a>
+                    <a class="header-links" href="#contact">Saber más</a>
+                    <a class="header-links" href="#faq">FAQ</a>
                 </nav>
                 <div
                     class="lg:tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full 
                             max-md:tw-flex-col max-md:tw-place-content-center"
                 >
-                    <button type="button" onclick="toggleMode()" class="header-links tw-text-gray-600 dark:tw-text-gray-300" title="toggle-theme" 
+                    <button type="button" onclick="toggleMode()" class="header-links tw-text-gray-600 dark:tw-text-gray-300" title="Toggle Theme" 
                             id="theme-toggle"> 
                         <i class="bi bi-sun" id="toggle-mode-icon"></i>
                     </button>
@@ -105,7 +107,7 @@
             <button
                 class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-gray-500 lg:tw-hidden"
                 onclick="toggleHeader()"
-                aria-label="menu"
+                aria-label="Menu"
                 id="collapse-btn"
             ></button>
         </header>
